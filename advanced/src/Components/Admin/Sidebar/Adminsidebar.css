@@ -1,0 +1,60 @@
+/* Sidebar container */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Adjust layout to column */
+    position: relative; /* Needed for positioning of bottom items */
+  }
+  
+  /* Menu container */
+  .menu {
+    padding: 20px;
+  }
+  
+  /* Menu item */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Menu link */
+  .menu-link {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 10px;
+  }
+  
+  /* Icon */
+  .menu-item svg {
+    font-size: 1.2rem;
+  }
+  
+  /* Bottom menu items */
+  .bottom-items {
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Make sure it spans the whole width */
+    padding: 20px;
+  }
+  
+  /* Bottom menu item */
+  .bottom-item {
+    margin-bottom: 10px; /* Add margin between items */
+  }
+
+  .bot{
+    margin-top: 100%;
+  }
+  
