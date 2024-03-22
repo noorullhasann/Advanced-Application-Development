@@ -1,0 +1,110 @@
+.homepage {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+ .header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: 40%;
+  }
+
+ .main-content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+   /* Additional styles for elaborated main content */
+  .job-opportunities {
+    margin-bottom: 40px;
+  }
+  
+  .job-opportunities h2 {
+    font-size: 24px;
+  }
+  
+  .job-opportunities p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 6%;
+  }
+  
+  .job-opportunities img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .trained-candidates {
+    margin-top: 50px;
+  }
+  
+  .trained-candidates h2 {
+    font-size: 24px;
+  }
+  
+  .trained-candidates p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+
+  .app {
+    display: flex;
+  }
+  
+  .filter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .has_card1{
+    background-color: #c9c0c09f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    position: absolute;
+    padding: 80px;
+    left:20%;
+    top:15%;
+    width: 200px;
+    height: 30%;
+    transition: transform 0.3s ease;
+  }
+  .card1_css{
+   position: relative;
+    top: -20%;
+    left: 4%;
+  }
+  .has_card2{
+    background-color: #c9c0c09f;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    position: absolute;
+    padding: 80px;
+    left:50%;
+    top:15%;
+    width: 200px;
+    height: 30%;
+    transition: transform 0.3s ease;
+  }
+
+  .home-footer
+  {
+    margin-top: 10%;
+  }

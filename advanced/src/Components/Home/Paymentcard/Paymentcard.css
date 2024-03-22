@@ -1,0 +1,65 @@
+.payment-card {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-top: 5%;
+  margin-left: 40%;
+}
+
+.payment-card-body {
+  padding: 20px;
+}
+
+.payment-card-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.payment-form-group {
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  margin-top: 5px;
+}
+
+.radio-group label {
+  margin-right: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.payment-form-control {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: rgba(142, 93, 172, 0.649);
+  color: #fff;
+  margin-right: 10px; /* Add margin between buttons */
+}
+
+.btn-secondary {
+  background-color: rgba(142, 93, 172, 0.649);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,52 @@
+.image-slider {
+    position: relative;
+    width: 50%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    overflow: hidden;
+    left: 30%;
+    margin-top: 8%;
+  }
+  
+  .candidate-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .candidate-image {
+    width: 200px; /* Adjust image size */
+    height: 200px; /* Adjust image size */
+    border-radius: 10%; /* Make the image circular */
+    margin-right: 20px; /* Adjust spacing between image and details */
+  }
+  
+  .candidate-details {
+    flex-grow: 1; /* Allow the details to fill the available space */
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hover background color */
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  

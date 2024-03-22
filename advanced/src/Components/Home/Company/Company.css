@@ -1,0 +1,84 @@
+.candidates-page {
+    max-width: 100%;
+    margin-left: 30%;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: rgba(142, 93, 172, 0.649);
+  }
+  
+  .job-opportunities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .job-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 0 0 calc(50% - 20px); /* Two cards per row with margin */
+  }
+  
+  .job-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    margin-bottom: 10px;
+  }
+  
+  .apply-button {
+    display: inline-block;
+    background-color: rgba(142, 93, 172, 0.649);
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .company-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add margin for spacing */
+    border-radius: 50%; /* Make the image round */
+  }
+  
+  .job-card {
+    position: relative; /* Ensure positioning context for the absolute image */
+    border: 1px solid #ccc; /* Example border style */
+    padding: 20px; /* Example padding */
+    margin-bottom: 20px; /* Example margin */
+  }
+  
+  .comfilter
+  {
+    margin-top: -45%;
+  }
+
+  .comfooter
+  {
+    margin-top: 13%;
+  }
+
+  .jobhead
+  {
+    margin-left: -43%;
+  }

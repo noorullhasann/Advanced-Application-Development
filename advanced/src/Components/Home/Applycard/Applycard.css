@@ -1,0 +1,55 @@
+.apply-card {
+  width: 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+  
+.apply-card-body {
+  padding: 20px;
+}
+  
+.apply-card-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+  
+.apply-form-group {
+  margin-bottom: 20px;
+}
+  
+.apply-form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+  
+.apply-text-right {
+  text-align: right;
+}
+  
+.apply-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.apply-btn-primary {
+  background-color: rgba(142, 93, 172, 0.649);
+  color: #fff;
+  margin-right: 10px; /* Add margin-right to create a gap */
+}
+  
+.apply-btn-secondary {
+  background-color: rgba(142, 93, 172, 0.649);
+  color: #fff;
+}
+  
+.apply-btn-primary:hover,
+.apply-btn-secondary:hover {
+  opacity: 0.8;
+}
