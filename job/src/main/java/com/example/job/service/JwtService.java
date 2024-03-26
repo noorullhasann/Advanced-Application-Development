@@ -16,7 +16,6 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 
 @Component
-
 public class JwtService {
     public static final String SECRET = "XbZ03msSp3Avrq1gHl1xieZC0GQ9MPwPXbZ03msSp3Avrq1gHl1xieZC0GQ9MPwP";
 
@@ -70,5 +69,4 @@ public class JwtService {
         byte[] keyBytes = Decoders.BASE64.decode(SECRET);
         return Keys.hmacShaKeyFor(keyBytes);
     }
-    
 }

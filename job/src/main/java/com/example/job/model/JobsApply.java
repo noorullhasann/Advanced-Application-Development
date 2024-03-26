@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
 public class JobsApply {
     @Id
     private int jobId;
@@ -21,5 +20,4 @@ public class JobsApply {
     private String email;
     private int amount;
     private String jobTitle;
-    
 }

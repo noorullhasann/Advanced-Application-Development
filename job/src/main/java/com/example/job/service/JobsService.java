@@ -12,6 +12,7 @@ import com.example.job.repository.JobsRepo;
 
 @Service
 public class JobsService {
+    
     @Autowired
     private JobsRepo jobsRepo;
 
@@ -47,5 +48,5 @@ public class JobsService {
     {
         jobsRepo.deleteById(id);
     }
-    
+
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,13 +21,14 @@ import com.example.job.model.JobsApply;
 import com.example.job.service.JobsService;
 
 @RestController
-@RequestMapping("/api/jobs")
-
+@RequestMapping("/user/jobs")
 public class JobsController {
+    
     @Autowired
     public JobsService jobsService;
 
     @GetMapping("/getAllJobs")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<List<JobsApply>> getAllJobs()
     {
         List<JobsApply> job=jobsService.getAllJobs();
@@ -41,6 +43,7 @@ public class JobsController {
     }
 
     @PostMapping("/addDetails")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<JobsApply> addJobs(@NonNull @RequestBody JobsApply jobsApply)
     {
         JobsApply addedUser = jobsService.addDetails(jobsApply);
@@ -53,5 +56,4 @@ public class JobsController {
         jobsService.cancelJobs(jobId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-    
 }

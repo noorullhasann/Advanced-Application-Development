@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class AuthRequest {
-    private String username;
-    private String password;
-
+@AllArgsConstructor      
+public class PaymentDto {
+    private String modeOfPayment;
+    
 }

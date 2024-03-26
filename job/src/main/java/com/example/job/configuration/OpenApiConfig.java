@@ -1,5 +1,4 @@
 package com.example.job.configuration;
-
 import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
@@ -12,10 +11,9 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
 
-
 @Configuration
-
 public class OpenApiConfig {
+    
     @Bean
         public OpenAPI defineOpenApi() {
                 Server server = new Server();
@@ -46,5 +44,4 @@ public class OpenApiConfig {
                                 .components(components)
                                 .addSecurityItem(securityRequirement);
         }
-    
 }

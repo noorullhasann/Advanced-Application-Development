@@ -1,4 +1,5 @@
 package com.example.job.configuration;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +16,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
-    @Autowired
+
+    
+        @Autowired
         private AuthenticationFilter authenticationFilter;
 
         @Autowired
@@ -24,23 +27,22 @@ public class SecurityConfig {
         @Bean
         public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
                 return httpSecurity
-                                .csrf(AbstractHttpConfigurer::disable)
-                                .authorizeHttpRequests(
-                                                request -> request.requestMatchers("/api/user/signup",
-                                                                "/api/auth/authenticate").permitAll())
+                                     .csrf(AbstractHttpConfigurer::disable)
+                                     .authorizeHttpRequests(requests -> requests
+                                 .requestMatchers( "/auth/**","/v3/api-docs/**",
+                                           "/swagger-ui.html", "/swagger-ui/**","/jobs/getAllJobs")
+                                 .permitAll())
                                 .authorizeHttpRequests(request -> request
                                                 .requestMatchers("/v3/api-docs/**", "/swagger-ui.html",
                                                                 "/swagger-ui/**")
                                                 .permitAll())
                                 .authorizeHttpRequests(requests -> requests
-                                                .requestMatchers("/api/users/*", "/api/viewjob/*")
+                                                .requestMatchers("/user/**","/admin/**","/jobs/**")
                                                 .authenticated())
                                 .sessionManagement(session -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                                 .authenticationProvider(authenticationProvider)
                                 .addFilterBefore(authenticationFilter, UsernamePasswordAuthenticationFilter.class)
                                 .build();
-                                
         }
-    }
-    
+}

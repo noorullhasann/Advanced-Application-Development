@@ -1,43 +1,48 @@
 package com.example.job.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.job.dto.AuthRequest;
-import com.example.job.service.JwtService;
+import com.example.job.dto.Userdto;
+import com.example.job.model.User;
+import com.example.job.repository.UserRepo;
+
+import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/auth")
-
+@RequestMapping("/auth")
+@RequiredArgsConstructor
 public class AuthenticationController {
     @Autowired
-    private JwtService jwtService;
+	private UserRepo userRegisterRepository;
+    private final com.example.job.service.AuthService service;
+	@PostMapping("/register")
+	 public ResponseEntity<String> register(
+		      @RequestBody Userdto request
+		  ) {
+		service.register(request);
+		    return ResponseEntity.ok("Registered Successfully");
+		  }
+	@GetMapping("/getregister")
+	public List<User> getregister()
+	{
+		return userRegisterRepository.findAll();
+		
+	}
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @GetMapping("/home")
-    public String Home() {
-        return "Initial Render Page.!";
-    }
-
-    @PostMapping("/authenticate")
-    public String authenticateAndGetToken(@RequestBody AuthRequest authRequest) {
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
-        if (authentication.isAuthenticated()) {
-            return jwtService.generateToken(authRequest.getEmail());
-        } else {
-            throw new UsernameNotFoundException("Invalid user request!");
-        }
-    }
+		  @PostMapping("/authentication")
+		  public ResponseEntity<com.example.job.dto.AuthResponse> authenticate(@RequestBody com.example.job.dto.AuthRequest request)
+		  {
+			return ResponseEntity.ok(service.authenticate(request));
+			  
+		  }
     
 }

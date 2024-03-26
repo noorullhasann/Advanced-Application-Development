@@ -1,14 +1,15 @@
 package com.example.job.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class AuthRequest {
-    private String username;
-    private String password;
-
+@AllArgsConstructor
+@Data
+@Builder
+public class AuthResponse {
+    private String token;
+    
 }

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class JobsDto {
     private String applicantName;
     private Long contactNumber;
@@ -15,5 +14,3 @@ public class JobsDto {
     private int amount;
     private String jobTitle;
 }
-    
-

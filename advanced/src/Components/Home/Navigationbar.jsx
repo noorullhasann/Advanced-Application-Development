@@ -14,6 +14,7 @@ import logo from 'E:/Advanced-Application-Development/advanced/src/assets/logo.p
 import { Link, useNavigate } from 'react-router-dom'; 
 
 
+
 const pages = [
   { name: 'Home', link: '/home' },
   { name: 'Jobs', link: '/jobs' },
